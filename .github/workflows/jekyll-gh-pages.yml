@@ -3,10 +3,10 @@ name: Deploy Vite to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change this if using a different branch
+      - main  # Ensure your default branch is correct
 
 permissions:
-  contents: write  # Allows deployment to the repo
+  contents: write
 
 jobs:
   deploy:
@@ -25,11 +25,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build Vite project
+      - name: Build project
         run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist  # Output directory of Vite build
+          folder: dist
