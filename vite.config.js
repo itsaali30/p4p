@@ -9,4 +9,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
+  base: '/p4p/', // Change to your GitHub repository name
 });
